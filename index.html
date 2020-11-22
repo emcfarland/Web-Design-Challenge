@@ -14,11 +14,73 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 
-  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+  <nav class="navbar navbar-light navbar-expand-lg" style="background-color: skyblue;">
+    <a class="navbar-brand" href="/">Weather by Latitude</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="comparison.html">Comparison</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data_table.html">Data</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Plots
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Temperature vs. Latitude</a>
+            <a class="dropdown-item" href="#">Cloudiness vs. Latitude</a>
+            <a class="dropdown-item" href="#">Humidity vs. Latitude</a>
+            <a class="dropdown-item" href="#">Wind Speed vs. Latitude</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <hr>
+
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-md-7">
+        <img src="assets\images\max_temp_vs_lat.png" alt="Temperature vs. Latitude" class="img-responsive float-left mr-2"/>
+        <br>
+        <p>
+          This website displays the results of the python-api-challenge, which used OpenWeather's API to compile weather data for 500+ random cities across the world. These data were stored in a pandas dataframe and saved as a CSV, and several series were plotted in matplotlib scatter plots to tease out any relationships in the data.
+        </p>
+      </div>
+      
+      <div class "col-md-4">
+        <div class="row">
+          <div class="col-md-2">
+              <a href="#"><img src="assets\images\max_temp_vs_lat.png" alt="Temperature plot" class="img-thumbnail img-responsive" ></a>
+          </div>
+          <div class="col-md-2">
+              <a href="#"><img src="assets\images\cloudiness_vs_lat.png" alt="Cloudiness plot" class="img-thumbnail img-responsive" ></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <a href="#"><img src="assets\images\humidity_vs_lat.png" alt="Humidity plot" class="img-thumbnail img-responsive" ></a>
+          </div>
+          <div class="col-md-2">    
+            <a href="#"><img src="assets\images\wind_speed_vs_lat.png" alt="Wind Speed plot" class="img-thumbnail img-responsive" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <!-- Javascript -->

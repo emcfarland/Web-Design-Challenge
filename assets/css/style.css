@@ -1,1 +1,4 @@
-/* Your stylesheet */
+aside div a img {
+    max-width: 200px;
+
+}
