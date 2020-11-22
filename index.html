@@ -14,14 +14,14 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-  <nav class="navbar navbar-light navbar-expand-lg" style="background-color: skyblue;">
-    <a class="navbar-brand" href="/">Weather by Latitude</a>
+  <nav class="navbar navbar-dark navbar-expand-lg">
+    <a class="navbar-brand" href="index.html">Weather by Latitude</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,14 +34,14 @@
           <a class="nav-link" href="data_table.html">Data</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="comparison.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Plots
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Temperature vs. Latitude</a>
-            <a class="dropdown-item" href="#">Cloudiness vs. Latitude</a>
-            <a class="dropdown-item" href="#">Humidity vs. Latitude</a>
-            <a class="dropdown-item" href="#">Wind Speed vs. Latitude</a>
+            <a class="dropdown-item" href="max_temp.html">Temperature vs. Latitude</a>
+            <a class="dropdown-item" href="cloudiness.html">Cloudiness vs. Latitude</a>
+            <a class="dropdown-item" href="humidity.html">Humidity vs. Latitude</a>
+            <a class="dropdown-item" href="wind_speed.html">Wind Speed vs. Latitude</a>
           </div>
         </li>
       </ul>
@@ -49,38 +49,55 @@
   </nav>
 
   <hr>
-
   <div class="container">
-    <div class="row justify-content-between">
-      <div class="col-md-7">
-        <img src="assets\images\max_temp_vs_lat.png" alt="Temperature vs. Latitude" class="img-responsive float-left mr-2"/>
-        <br>
-        <p>
-          This website displays the results of the python-api-challenge, which used OpenWeather's API to compile weather data for 500+ random cities across the world. These data were stored in a pandas dataframe and saved as a CSV, and several series were plotted in matplotlib scatter plots to tease out any relationships in the data.
-        </p>
-      </div>
-      
-      <div class "col-md-4">
-        <div class="row">
-          <div class="col-md-2">
-              <a href="#"><img src="assets\images\max_temp_vs_lat.png" alt="Temperature plot" class="img-thumbnail img-responsive" ></a>
-          </div>
-          <div class="col-md-2">
-              <a href="#"><img src="assets\images\cloudiness_vs_lat.png" alt="Cloudiness plot" class="img-thumbnail img-responsive" ></a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-2">
-            <a href="#"><img src="assets\images\humidity_vs_lat.png" alt="Humidity plot" class="img-thumbnail img-responsive" ></a>
-          </div>
-          <div class="col-md-2">    
-            <a href="#"><img src="assets\images\wind_speed_vs_lat.png" alt="Wind Speed plot" class="img-thumbnail img-responsive" ></a>
+    <div class="row">
+    
+      <div class="col-md-6 col-sm-12 col-xs-12" id="about-page">
+        <div class="col-md-12">
+          <div class="container" id="overview">
+            <h1>Summary:<br>Latitude and Weather</h1>
+            <img src="assets\images\max_temp_vs_lat.png" alt="Temperature vs. Latitude" class="float-left img-responsive"/>
+            <p>
+              This website displays the results of the python-api-challenge, which used OpenWeather's API to compile weather data for 500+ random cities across the world. These data were stored in a pandas dataframe and saved as a CSV, and several series were plotted in matplotlib scatter plots to tease out any relationships in the data.
+            </p>
           </div>
         </div>
       </div>
+    
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="col-md-12">
+          <div class="container" id="sidebar">
+            <h1>Visualizations</h1>
+            <div class="row">
+              <br>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                  <h4>Temperature</h4>
+                  <a href="max_temp.html"><img src="assets\images\max_temp_vs_lat.png" alt="Temperature plot" class="img-thumbnail img-responsive"></a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                  <h4>Cloudiness</h4>
+                  <a href="cloudiness.html"><img src="assets\images\cloudiness_vs_lat.png" alt="Cloudiness plot" class="img-thumbnail img-responsive" ></a>
+              </div>
+              <br>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <h4>Humidity</h4>
+                <a href="humidity.html"><img src="assets\images\humidity_vs_lat.png" alt="Humidity plot" class="img-thumbnail img-responsive" ></a>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">  
+                <h4>Wind Speed</h4>  
+                <a href="wind_speed.html"><img src="assets\images\wind_speed_vs_lat.png" alt="Wind Speed plot" class="img-thumbnail img-responsive" ></a>
+              </div>
+              <br>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <br>
+
     </div>
   </div>
-
 
 
   <!-- Javascript -->
